@@ -5,9 +5,9 @@ version: 2
 # typing. See http://yaml.org/type/merge.html for details.
 defaults: &defaults
   environment:
-    CI_SCRIPTS: 'npx --quiet --package @reactioncommerce/ci-scripts@1.6.2'
-    DOCKER_REPOSITORY: "reactioncommerce/identity"
-    DOCKER_NAMESPACE: "reactioncommerce"
+    CI_SCRIPTS: 'npx --quiet --package @mailchimpopencommerce/ci-scripts@1.6.2'
+    DOCKER_REPOSITORY: "mailchimpopencommerce/identity"
+    DOCKER_NAMESPACE: "mailchimpopencommerce"
     DOCKER_NAME: "identity"
   docker:
     - image: circleci/node:12.16.1-stretch
@@ -19,17 +19,17 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - reaction-v3-node-modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
-            - reaction-v3-node-modules-{{ .Branch }}
+            - opencommerce-v3-node-modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+            - opencommerce-v3-node-modules-{{ .Branch }}
       - run:
           name: Install NPM dependencies
           command: npm install
       - save_cache:
-          key: reaction-v3-node-modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+          key: opencommerce-v3-node-modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
       - save_cache:
-          key: reaction-v3-node-modules-{{ .Branch }}
+          key: opencommerce-v3-node-modules-{{ .Branch }}
           paths:
             - node_modules
 
@@ -49,8 +49,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - reaction-v3-node-modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
-            - reaction-v3-node-modules-{{ .Branch }}
+            - opencommerce-v3-node-modules-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
+            - opencommerce-v3-node-modules-{{ .Branch }}
       - run:
           name: Lint JavaScript
           command: npm run lint
@@ -77,7 +77,7 @@ workflows:
           requires:
             - install-dependencies
       - docker-build-push:
-          context: reaction-publish-docker
+          context: opencommerce-publish-docker
           requires:
             - dockerfile-lint
             - eslint

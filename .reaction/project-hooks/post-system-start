@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Post System Start Hook
-# Invoked by the reaction-next project bootstrapping process.
+# Invoked by the moc-next project bootstrapping process.
 #
 # Invoked after all services in the system have been started.
 #

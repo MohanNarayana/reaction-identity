@@ -2,16 +2,16 @@ import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
-import Random from "@reactioncommerce/random";
+import Random from "@mailchimpopencommerce/random";
 import gql from "graphql-tag";
 import { useMutation } from "@apollo/react-hooks";
 import SimpleSchema from "simpl-schema";
 import useReactoForm from "reacto-form/cjs/useReactoForm";
-import Button from "@reactioncommerce/components/Button/v1";
-import ErrorsBlock from "@reactioncommerce/components/ErrorsBlock/v1";
-import Field from "@reactioncommerce/components/Field/v1";
-import InlineAlert from "@reactioncommerce/components/InlineAlert/v1";
-import TextInput from "@reactioncommerce/components/TextInput/v1";
+import Button from "@mailchimpopencommerce/components/Button/v1";
+import ErrorsBlock from "@mailchimpopencommerce/components/ErrorsBlock/v1";
+import Field from "@mailchimpopencommerce/components/Field/v1";
+import InlineAlert from "@mailchimpopencommerce/components/InlineAlert/v1";
+import TextInput from "@mailchimpopencommerce/components/TextInput/v1";
 
 const sendResetAccountPasswordEmailMutation = gql`
   mutation sendResetAccountPasswordEmail($input: SendResetAccountPasswordEmailInput!) {

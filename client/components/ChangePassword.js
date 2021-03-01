@@ -5,12 +5,12 @@ import { makeStyles } from "@material-ui/core";
 import queryString from "query-string";
 import SimpleSchema from "simpl-schema";
 import useReactoForm from "reacto-form/cjs/useReactoForm";
-import Random from "@reactioncommerce/random";
-import Button from "@reactioncommerce/components/Button/v1";
-import ErrorsBlock from "@reactioncommerce/components/ErrorsBlock/v1";
-import Field from "@reactioncommerce/components/Field/v1";
-import InlineAlert from "@reactioncommerce/components/InlineAlert/v1";
-import TextInput from "@reactioncommerce/components/TextInput/v1";
+import Random from "@mailchimpopencommerce/random";
+import Button from "@mailchimpopencommerce/components/Button/v1";
+import ErrorsBlock from "@mailchimpopencommerce/components/ErrorsBlock/v1";
+import Field from "@mailchimpopencommerce/components/Field/v1";
+import InlineAlert from "@mailchimpopencommerce/components/InlineAlert/v1";
+import TextInput from "@mailchimpopencommerce/components/TextInput/v1";
 import { Accounts } from "meteor/accounts-base";
 import { Meteor } from "meteor/meteor";
 

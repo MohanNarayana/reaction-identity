@@ -1,6 +1,6 @@
 import { check, Match } from "meteor/check";
 import { Meteor } from "meteor/meteor";
-import Logger from "@reactioncommerce/logger";
+import Logger from "@mailchimpopencommerce/logger";
 import config from "./config.js";
 import hydra from "./hydra.js";
 
