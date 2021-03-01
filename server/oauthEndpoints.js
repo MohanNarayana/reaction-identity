@@ -1,6 +1,6 @@
 /* eslint-disable node/no-deprecated-api */
 import url from "url";
-import Logger from "@reactioncommerce/logger";
+import Logger from "@mailchimpopencommerce/logger";
 import { WebApp } from "meteor/webapp";
 import config from "./config.js";
 import hydra from "./hydra.js";

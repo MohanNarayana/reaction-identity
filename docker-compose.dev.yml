@@ -16,19 +16,19 @@ services:
     # add `build` prop here, it changes the meaning of that `image` prop to
     # "tag the built image with this image name". This has the effect of breaking
     # the app after you've run with the override and then go back to running without
-    # it, because now `reactioncommerce/identity:trunk` would actually be your dev image.
+    # it, because now `mailchimp-open-commerce/identity:trunk` would actually be your dev image.
     # To work around this issue, we specify a different tag name here, which does not
     # match any of our published tags.
-    image: reactioncommerce/identity:local-dev
+    image: mailchimp-open-commerce/identity:local-dev
     build:
       context: .
       dockerfile: Dockerfile-dev
     command: bash -c "npm install --no-audit && node ./.reaction/waitForMongo.js && npm start"
     volumes:
       - .:/usr/local/src/app:cached
-      - reaction_meteor_local:/usr/local/src/app/.meteor/local
-      - reaction_node_modules:/usr/local/src/app/node_modules # do not link node_modules in, and persist it between dc up runs
+      - opencommerce_meteor_local:/usr/local/src/app/.meteor/local
+      - opencommerce_node_modules:/usr/local/src/app/node_modules # do not link node_modules in, and persist it between dc up runs
 
 volumes:
-  reaction_node_modules:
-  reaction_meteor_local:
+  opencommerce_node_modules:
+  opencommerce_meteor_local:

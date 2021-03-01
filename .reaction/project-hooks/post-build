@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Post Build Hook
-# Invoked by the reaction-next project bootstrapping process.
+# Invoked by the moc-next project bootstrapping process.
 #
 # Invoked after Docker build.
 # Perform any actions here that are required after docker-compose build but

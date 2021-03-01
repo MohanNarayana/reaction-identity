@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Post Project Start Hook
-# Invoked by the reaction-next project bootstrapping process.
+# Invoked by the moc-next project bootstrapping process.
 #
 # Invoked after this service is started. Can be used for project specific
 # actions that should be performed after the project is running, like database

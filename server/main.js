@@ -1,5 +1,5 @@
 import { Meteor } from "meteor/meteor";
-import Logger from "@reactioncommerce/logger";
+import Logger from "@mailchimpopencommerce/logger";
 import config from "./config.js";
 import { oauthLogin } from "./oauthMethods.js";
 
@@ -13,5 +13,5 @@ import "./i18n/handler.js";
 import "./oauthEndpoints.js";
 
 Meteor.startup(() => {
-  Logger.info(`Serving Reaction Identity at ${config.ROOT_URL}`);
+  Logger.info(`Serving Open Commerce Identity at ${config.ROOT_URL}`);
 });

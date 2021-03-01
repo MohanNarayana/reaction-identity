@@ -1,4 +1,4 @@
-import Logger from "@reactioncommerce/logger";
+import Logger from "@mailchimpopencommerce/logger";
 import fetch from "node-fetch";
 import config from "./config.js";
 
